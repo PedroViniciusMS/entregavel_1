@@ -3,7 +3,41 @@
 
 //ESCREVA SEU CÓDIGO AQUI!!
 
+function Calculadora(numero1, numero2, operador) {
 
+  let resultado
+  let num1 = parseInt(numero1)
+  let num2 = parseInt(numero2)
+
+    switch(operador) {
+      
+      case("+"):
+        resultado = num1 + num2
+        break;
+      
+      case("-"):
+       resultado = num1 - num2
+       break;
+      
+      case("*"):        
+        resultado = num1 * num2
+        break;
+
+      case("/"):        
+        resultado = num1 / num2
+        break;
+      
+      case("e"):        
+         resultado = 1; // Começa com 1, pois é a base neutra da multiplicação
+        for (let i = 0; i < num2; i++) {
+        resultado *= num1; // Multiplica num1 por ele mesmo num2 vezes
+      }
+        break;
+      }
+        if(operador == undefined || resultado > 1000000) 
+         resultado =  "ERRO"
+        return resultado
+  }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
